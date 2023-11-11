@@ -1,0 +1,63 @@
+@import "../utils/variabeles";
+@import "../utils/mixins";
+
+.tuto{
+    padding: 0 20px;
+    margin-top: 30px;
+    &__titre{
+    margin: 0;
+    }
+}
+
+.tuto__steps{
+    @include tss;
+}
+
+.tuto__step{
+        @include ts;
+
+    &::before{
+        @include tsb
+    }
+    &:hover{
+        background-color: $tutohover;
+    }
+    .tuto__step--icon{
+        color: $grey4;
+        width: 15px;
+        height: 15px;
+        margin-right: 15px;
+        padding-top: 4px;
+    }
+}
+
+.tuto__step:hover .tuto__step--icon{
+        color:$purple;
+}
+
+
+.texte{
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+@media all and (min-width:1024px) {
+
+    .tuto__steps{
+        display: flex;
+        flex-direction: row;
+        margin: 25px;
+        gap: 50px;
+    }
+
+    .tuto__step{
+        flex: 1;
+        margin: 0px 12px -25px -17px;
+    }
+    .container_tuto{
+        padding-right:100px;
+        padding-left: 100px;
+        padding-bottom: 20px;
+    }
+}

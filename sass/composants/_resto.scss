@@ -1,0 +1,78 @@
+@import "../utils/variabeles";
+@import "../utils/mixins";
+
+#restau{
+    @include resto;
+}
+
+.cards{
+    @include cards;
+}
+
+@media all and (min-width:1024px) {
+
+    .cards{
+        grid-template-columns: 1fr 1fr;
+        gap:40px;
+    
+    }
+
+    .container__restau{
+        margin-left:100px;
+        margin-right:100px;
+    }
+
+    .container_tuto{
+        padding-right:100px;
+        padding-left: 100px;
+        padding-bottom: 20px;
+    }
+}
+.card{
+    @include card;
+    
+    &__img{
+        @include cardimg;
+    }
+    &__new{
+        @include cardnew;
+    }
+    &__desc{
+        @include cardesc;
+    }
+    &__content{
+        flex: 1;
+    }
+    
+    &__titre{
+        margin: 0 0 4px 0;
+    }
+    
+    &__btn{
+        font-size: 24px;
+    }
+
+}
+
+.btn__like{
+    @include btnlike;
+    
+    &--outline {
+        position: absolute;
+    }
+    &--solid{
+        @include likesolid;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover &--solid {
+        transform: scale(1);
+    }
+
+    &:hover &--outline{
+        @include hoverlike;
+    }
+}

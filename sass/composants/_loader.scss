@@ -1,0 +1,53 @@
+@import "../utils/variabeles";
+@import "../utils/mixins";
+
+.loader{
+    @include loading;
+    &__item{
+        @include loaditem;
+    &Container{
+        @include loadcontain;
+    }
+    &--1 {
+        background-color: $purple;
+      }
+    
+      &--2 {
+        background-color: $pink;
+        animation-delay: 0.25s;
+      }
+    
+      &--3 {
+        background-color: $green2;
+        animation-delay: 0.5s;
+      }
+      &--4 {
+        background-color: $blue;
+        animation-delay: 0.75s;
+      }
+      
+    }
+}
+
+@keyframes loader{
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+@keyframes jump{
+    0% {
+        transform: translateY(0);
+    }
+    
+    25% {
+        transform: translateY(8px);
+    }
+    75% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

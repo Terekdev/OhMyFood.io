@@ -1,0 +1,176 @@
+@import "../utils/variabeles";
+@import "../utils/mixins";
+
+.headpage--arrow {
+    position: relative;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.header__arrow{
+    @include arrow;
+}
+
+.banner_img{
+    @include restoimg;
+}
+
+.contain__menu{
+    @include containmenu;
+}
+
+@media all and (min-width: 1024px) {
+    .contain__menu{
+        @include containmenu1400;
+    }
+
+    .resto__header{
+        @include restoheader;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
+.resto__header{
+    @include restoheader
+}
+
+.resto__titre{
+    font-family: Shrikhand, "Cursive";
+    font-size: 28px;
+}
+
+.menus{
+    display: grid;
+    /*@media (min-width:64rem) {
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 16px;
+      }*/
+}
+.Menu{
+    max-width: 100%;
+    padding: 0 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card__item{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.menu__titre{
+    @include menutitre
+}
+
+.menu__titre:after{
+    @include menutitrea
+}
+
+.itemMenu{
+    @include itemMenu
+    
+}
+@keyframes itemAppear{
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.itemMenu__content{
+    overflow: hidden;
+    flex: 1;
+}
+.itemMenu__content, .itemMenu__titre {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itemMenu__titre {
+    margin: 0;
+}
+
+.itemMenu__sub{
+    margin: 0;
+}
+
+.itemMenu__prix{
+    @include itemMenuprix
+}
+
+.itemMenu__order{
+    @include itemMenuorder
+}
+
+.itemMenu:hover {
+    cursor: pointer
+}
+
+.itemMenu:hover .itemMenu__order {
+    margin-right: -1rem;
+}
+
+.itemMenu:hover .itemMenu__flexIcon {
+    transform: rotate(0);
+}
+
+.itemMenu__flexIcon{
+    @include itemMenuFI
+}
+
+.itemMenu__icon {
+    color: #99e2d0;
+}
+
+.anim0{
+    animation-delay: 0s;
+}
+.anim1 {
+    animation-delay: 1s;
+}
+.anim2 {
+    animation-delay: 2s;
+}
+.anim3 {
+    animation-delay: 3s;
+}
+.anim4{
+    animation-delay: 4s;
+}
+.anim5 {
+    animation-delay: 5s;
+}
+.anim6 {
+    animation-delay: 6s;
+}
+
+.anim7 {
+    animation-delay: 7s;
+}
+
+.anim8 {
+    animation-delay: 8s;
+}
+
+.anim9{
+    animation-delay: 9s;
+}
+
+.menu__bouton{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 30px 0;
+    
+}
+
+
+
+
+

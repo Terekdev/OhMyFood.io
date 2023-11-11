@@ -1,0 +1,31 @@
+@import "../utils/variabeles";
+@import "../utils/mixins";
+
+.headpage{
+    @include header;
+}
+
+.header__logo{
+    @include logo;
+    font-size: 30px;
+}
+
+.localisation{
+    @include loc
+}
+
+.ping{
+    @include ping;
+}
+
+.info{
+    @include info;
+
+    &__sub{
+        @include sub;
+    }
+}
+
+.bouton{
+    @include btn;
+}

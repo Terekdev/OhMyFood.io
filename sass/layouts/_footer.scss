@@ -1,0 +1,57 @@
+@import "../utils/variabeles";
+@import "../utils/mixins";
+
+.footer .container {
+    @include footercontain;
+}
+
+.footer{
+    background-color: $grey1;
+
+&__logo{
+        @include footerlogo;
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    &__listetc {
+        margin: 8px 0;
+    }
+    
+    &__link {
+        color: $white;
+        text-decoration: none;
+    }
+    
+    &__icon{
+        width: 20px;
+        margin-right: 8px;
+    }
+}
+
+@media all and (min-width:1024px) {
+    .footer__list{
+        display: flex;
+        flex-direction: row;
+        order: 1;
+    }
+    .footer__listetc{
+        padding-right: 10px;
+    }
+
+    .footer__logo{
+        order: 2;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .footer .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 16px;
+        padding-top: 50px;
+    }
+}

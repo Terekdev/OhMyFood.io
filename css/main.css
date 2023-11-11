@@ -1,0 +1,720 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto';
+  background-color: white;
+}
+
+h2 {
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+}
+
+/*Loader*/
+/*Header*/
+/*Tuto*/
+/*Restau*/
+/*Footer*/
+/*Menu Resto*/
+/*Loader*/
+/*Header*/
+/*Tuto*/
+/*Restau*/
+/*Footer*/
+/*Menu Resto*/
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: loader 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader__item {
+  height: 16px;
+  width: 16px;
+  animation: jump 1s;
+  animation-iteration-count: 1;
+}
+
+.loader__itemContainer {
+  display: flex;
+  width: 80px;
+  justify-content: space-between;
+}
+
+.loader__item--1 {
+  background-color: #9356dc;
+}
+
+.loader__item--2 {
+  background-color: #ff79da;
+  animation-delay: 0.25s;
+}
+
+.loader__item--3 {
+  background-color: #99E2D0;
+  animation-delay: 0.5s;
+}
+
+.loader__item--4 {
+  background-color: #89C8FA;
+  animation-delay: 0.75s;
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(8px);
+  }
+
+  75% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*Loader*/
+/*Header*/
+/*Tuto*/
+/*Restau*/
+/*Footer*/
+/*Menu Resto*/
+.headpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+
+.header__logo {
+  font-family: "Shrikhand";
+  font-style: italic;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-size: 30px;
+}
+
+.localisation {
+  background-color: #EAEAEA;
+  color: #353535;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 16px;
+  font-size: 16px;
+}
+
+.ping {
+  margin-right: 15px;
+  width: 12px;
+  height: 16px;
+}
+
+.info {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 5px 20px 50px;
+}
+
+.info__sub {
+  font-size: 16px;
+  color: #353535;
+  font-weight: 300;
+}
+
+.bouton {
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 15px 22px;
+  color: #fff;
+  border-style: none;
+}
+
+/*Loader*/
+/*Header*/
+/*Tuto*/
+/*Restau*/
+/*Footer*/
+/*Menu Resto*/
+.bouton {
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 15px 22px;
+  color: white;
+  border-style: none;
+}
+
+.bouton:hover {
+  background: linear-gradient(170deg, rgba(255, 121, 218, 0.8) 0%, rgba(214, 108, 219, 0.8) 39%, rgba(171, 94, 220, 0.8) 85%, rgba(155, 89, 220, 0.8) 100%);
+  box-shadow: 4px 4px 2px #acabab;
+}
+
+/*Loader*/
+/*Header*/
+/*Tuto*/
+/*Restau*/
+/*Footer*/
+/*Menu Resto*/
+.tuto {
+  padding: 0 20px;
+  margin-top: 30px;
+}
+
+.tuto__titre {
+  margin: 0;
+}
+
+.tuto__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: compteListe;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.tuto__step {
+  padding: 24px;
+  margin: 16px 0 21px 12px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  display: flex;
+  position: relative;
+}
+
+.tuto__step::before {
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
+  background: #9356dc;
+  height: 24px;
+  width: 24px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  left: -12px;
+}
+
+.tuto__step:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+
+.tuto__step .tuto__step--icon {
+  color: #7E7E7E;
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+  padding-top: 4px;
+}
+
+.tuto__step:hover .tuto__step--icon {
+  color: #9356dc;
+}
+
+.texte {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+@media all and (min-width: 1024px) {
+  .tuto__steps {
+    display: flex;
+    flex-direction: row;
+    margin: 25px;
+    gap: 50px;
+  }
+
+  .tuto__step {
+    flex: 1;
+    margin: 0px 12px -25px -17px;
+  }
+
+  .container_tuto {
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 20px;
+  }
+}
+
+/*Loader*/
+/*Header*/
+/*Tuto*/
+/*Restau*/
+/*Footer*/
+/*Menu Resto*/
+#restau {
+  padding: 32px 16px;
+  background-color: #f6f6f6;
+  margin-top: 50px;
+}
+
+.cards {
+  display: grid;
+  row-gap: 32px;
+}
+
+@media all and (min-width: 1024px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .container__restau {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .container_tuto {
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 20px;
+  }
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  position: relative;
+  text-decoration: none;
+}
+
+.card__img {
+  height: 192px;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+}
+
+.card__new {
+  background-color: #99E2D0;
+  color: #008766;
+  padding: 8px;
+  border-radius: 2px;
+  position: absolute;
+  top: 16px;
+  right: 12px;
+}
+
+.card__desc {
+  padding: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+
+.card__content {
+  flex: 1;
+}
+
+.card__titre {
+  margin: 0 0 4px 0;
+}
+
+.card__btn {
+  font-size: 24px;
+}
+
+.btn__like {
+  height: 20px;
+  width: 20px;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn__like--outline {
+  position: absolute;
+}
+
+.btn__like--solid {
+  position: absolute;
+  background: linear-gradient(180deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transform: scale(0);
+  transition: transform 500ms;
+}
+
+.btn__like:hover {
+  cursor: pointer;
+}
+
+.btn__like:hover .btn__like--solid {
+  transform: scale(1);
+}
+
+.btn__like:hover .btn__like--outline {
+  background: linear-gradient(180deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/*Loader*/
+/*Header*/
+/*Tuto*/
+/*Restau*/
+/*Footer*/
+/*Menu Resto*/
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.footer {
+  background-color: #353535;
+}
+
+.footer__logo {
+  color: #fff;
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0 0 16px;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__listetc {
+  margin: 8px 0;
+}
+
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__icon {
+  width: 20px;
+  margin-right: 8px;
+}
+
+@media all and (min-width: 1024px) {
+  .footer__list {
+    display: flex;
+    flex-direction: row;
+    order: 1;
+  }
+
+  .footer__listetc {
+    padding-right: 10px;
+  }
+
+  .footer__logo {
+    order: 2;
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  .footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 16px;
+    padding-top: 50px;
+  }
+}
+
+/*Loader*/
+/*Header*/
+/*Tuto*/
+/*Restau*/
+/*Footer*/
+/*Menu Resto*/
+/*Loader*/
+/*Header*/
+/*Tuto*/
+/*Restau*/
+/*Footer*/
+/*Menu Resto*/
+.headpage--arrow {
+  position: relative;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.header__arrow {
+  position: absolute;
+  left: 16px;
+  width: 2rem;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.banner_img {
+  max-width: 100%;
+  max-height: 512px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contain__menu {
+  border-radius: 32px 32px 0 0;
+  background-color: #f6f6f6;
+  margin-top: -64px;
+  position: relative;
+}
+
+@media all and (min-width: 1024px) {
+  .contain__menu {
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .resto__header {
+    padding: 16px 32px 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+.resto__header {
+  padding: 16px 32px 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resto__titre {
+  font-family: Shrikhand, "Cursive";
+  font-size: 28px;
+}
+
+.menus {
+  display: grid;
+  /*@media (min-width:64rem) {
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 16px;
+      }*/
+}
+
+.Menu {
+  max-width: 100%;
+  padding: 0 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__item {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menu__titre {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 8px;
+  font-weight: 400;
+}
+
+.menu__titre:after {
+  content: "";
+  width: 48px;
+  height: 4px;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.itemMenu {
+  background-color: #fff;
+  padding: 16px;
+  display: flex;
+  border-radius: 12px;
+  margin: 16px 0;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  animation: itemAppear .6s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  transform: scale(0);
+  max-width: 100%;
+}
+
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.itemMenu__content {
+  overflow: hidden;
+  flex: 1;
+}
+
+.itemMenu__content,
+.itemMenu__titre {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.itemMenu__titre {
+  margin: 0;
+}
+
+.itemMenu__sub {
+  margin: 0;
+}
+
+.itemMenu__prix {
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 8px;
+}
+
+.itemMenu__order {
+  background-color: #99E2D0;
+  margin: -16px -80px -16px 16px;
+  width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .5s;
+}
+
+.itemMenu:hover {
+  cursor: pointer;
+}
+
+.itemMenu:hover .itemMenu__order {
+  margin-right: -1rem;
+}
+
+.itemMenu:hover .itemMenu__flexIcon {
+  transform: rotate(0);
+}
+
+.itemMenu__flexIcon {
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: .5s;
+}
+
+.itemMenu__icon {
+  color: #99e2d0;
+}
+
+.anim0 {
+  animation-delay: 0s;
+}
+
+.anim1 {
+  animation-delay: 1s;
+}
+
+.anim2 {
+  animation-delay: 2s;
+}
+
+.anim3 {
+  animation-delay: 3s;
+}
+
+.anim4 {
+  animation-delay: 4s;
+}
+
+.anim5 {
+  animation-delay: 5s;
+}
+
+.anim6 {
+  animation-delay: 6s;
+}
+
+.anim7 {
+  animation-delay: 7s;
+}
+
+.anim8 {
+  animation-delay: 8s;
+}
+
+.anim9 {
+  animation-delay: 9s;
+}
+
+.menu__bouton {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 30px 0;
+}

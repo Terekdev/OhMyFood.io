@@ -1,0 +1,330 @@
+@import "../utils/variabeles";
+
+/*Loader*/
+
+@mixin loading{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: $loadcolor;
+    animation: loader 0.01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 10000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+@mixin loaditem{
+    height: 16px;
+    width: 16px;
+    animation: jump 1s;
+    animation-iteration-count: 1;
+}
+
+@mixin loadcontain{
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+}
+
+
+/*Header*/
+
+@mixin header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    box-shadow: 0 0 8px $headershadow;
+}
+@mixin logo{
+    font-family: "Shrikhand";
+    font-style: italic;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}   
+
+@mixin loc{
+    background-color: $grey2;
+    color: $grey1;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 16px;
+    font-size: 16px;
+}
+
+@mixin ping{
+    margin-right: 15px;
+    width: 12px;
+    height: 16px;    
+}
+
+@mixin info{
+    text-align: center;
+    background-color: $grey;
+    padding: 5px 20px 50px;
+}
+
+@mixin sub {
+    font-size: 16px;
+    color: $grey1;
+    font-weight: 300;
+}
+
+@mixin btn{
+    background: $btn;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 15px 22px;
+    color: $white;
+    border-style: none;
+}
+
+/*Tuto*/
+
+@mixin tss{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: compteListe;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+@mixin ts{
+    padding: 24px;
+    margin: 16px 0 21px 12px;
+    box-shadow: 4px 4px 8px $tutoshadow;
+    border-radius: 20px;
+    background-color: $grey;
+    display: flex;
+    position: relative;
+}
+
+@mixin tsb{
+    counter-increment: compteListe 1;
+    content: counter(compteListe) " ";
+    background: $purple;
+    height: 24px;
+    width: 24px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    position: absolute;
+    left: -12px;
+}
+
+/*Restau*/
+
+@mixin resto{
+    padding: 32px 16px;
+    background-color: $grey;
+    margin-top: 50px;
+}
+
+@mixin cards{
+    display: grid;
+    row-gap: 32px;
+}
+
+@mixin card{
+    background-color: $white;
+    border-radius: 16px;
+    position: relative;
+    text-decoration: none;
+}
+
+@mixin cardimg{
+    height: 192px;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+}
+
+@mixin cardnew{
+    background-color:$green2;
+    color: $green;
+    padding: 8px;
+    border-radius: 2px;
+    position: absolute;
+    top: 16px;
+    right: 12px;
+}
+
+@mixin cardesc{
+    padding: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+}
+
+@mixin btnlike{
+    height: 20px;
+    width: 20px;
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+@mixin likesolid{
+    position: absolute;
+    background: linear-gradient(180deg, $purple 0%, $pink 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform: scale(0);
+    transition: transform 500ms;
+}
+
+@mixin hoverlike{
+    background: linear-gradient(180deg, $purple 0%, $pink 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/*Footer*/
+
+@mixin footercontain{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+@mixin footerlogo{
+    color: $white;
+    font-family: "Shrikhand";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0 0 16px;
+}
+
+/*Menu Resto*/
+
+@mixin arrow{
+    position: absolute;
+    left: 16px;
+    width: 2rem;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #000;
+}
+
+@mixin restoimg{
+    max-width: 100%;
+    max-height: 512px;
+    width: 100%;
+    object-fit: cover;
+}
+
+@mixin containmenu{
+    border-radius: 32px 32px 0 0;
+    background-color: $grey;
+    margin-top: -64px;
+    position: relative;
+}
+
+@mixin containmenu1400{
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+@mixin restoheader{
+    padding: 16px 32px 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin menutitre{
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 8px;
+    font-weight: 400;
+}
+
+@mixin menutitrea{
+    content: "";
+    width: 48px;
+    height: 4px;
+    background-color: $green2;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+@mixin itemMenu{
+    background-color: #fff;
+    padding: 16px;
+    display: flex;
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 4px 4px 16px rgba(0,0,0,.1);
+    overflow: hidden;
+    cursor: pointer;
+    animation: itemAppear .6s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+    transform: scale(0);
+    max-width: 100%;
+}
+
+@mixin itemMenuprix{
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 8px;
+}
+
+@mixin itemMenuorder{
+    background-color: $green2;
+    margin: -16px -80px -16px 16px;
+    width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+}
+
+@mixin itemMenuFI{
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: .5s;
+}
+
+@mixin menuBouton{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 30px 0;
+}
