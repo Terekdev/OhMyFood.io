@@ -1,9 +1,14 @@
 {
-  "dependencies": {
-    "node-sass": "^9.0.0",
-    "sass": "^1.69.5"
-  },
+  "name": "projet-4-omf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "sass": "node-sass --watch ./sass/main.scss ./css/main.css"
+    "sass": "sass --watch ./sass/main.scss ./css/main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.5"
   }
 }

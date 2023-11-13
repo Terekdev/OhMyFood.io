@@ -27,7 +27,6 @@
     }
 
     .resto__header{
-        @include restoheader;
         justify-content: center;
         gap: 40px;
     }

@@ -6,7 +6,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   background-color: white;
 }
 
@@ -43,34 +43,28 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-
 .loader__item {
   height: 16px;
   width: 16px;
   animation: jump 1s;
   animation-iteration-count: 1;
 }
-
 .loader__itemContainer {
   display: flex;
   width: 80px;
   justify-content: space-between;
 }
-
 .loader__item--1 {
   background-color: #9356dc;
 }
-
 .loader__item--2 {
   background-color: #ff79da;
   animation-delay: 0.25s;
 }
-
 .loader__item--3 {
   background-color: #99E2D0;
   animation-delay: 0.5s;
 }
-
 .loader__item--4 {
   background-color: #89C8FA;
   animation-delay: 0.75s;
@@ -82,25 +76,20 @@ h2 {
     z-index: -10;
   }
 }
-
 @keyframes jump {
   0% {
     transform: translateY(0);
   }
-
   25% {
     transform: translateY(8px);
   }
-
   75% {
     transform: translateY(-8px);
   }
-
   100% {
     transform: translateY(0);
   }
 }
-
 /*Loader*/
 /*Header*/
 /*Tuto*/
@@ -146,20 +135,10 @@ h2 {
   background-color: #f6f6f6;
   padding: 5px 20px 50px;
 }
-
 .info__sub {
   font-size: 16px;
   color: #353535;
   font-weight: 300;
-}
-
-.bouton {
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  text-decoration: none;
-  border-radius: 25px;
-  padding: 15px 22px;
-  color: #fff;
-  border-style: none;
 }
 
 /*Loader*/
@@ -192,7 +171,6 @@ h2 {
   padding: 0 20px;
   margin-top: 30px;
 }
-
 .tuto__titre {
   margin: 0;
 }
@@ -216,7 +194,6 @@ h2 {
   display: flex;
   position: relative;
 }
-
 .tuto__step::before {
   counter-increment: compteListe 1;
   content: counter(compteListe) " ";
@@ -231,11 +208,9 @@ h2 {
   position: absolute;
   left: -12px;
 }
-
 .tuto__step:hover {
   background-color: rgba(147, 86, 220, 0.1);
 }
-
 .tuto__step .tuto__step--icon {
   color: #7E7E7E;
   width: 15px;
@@ -261,19 +236,16 @@ h2 {
     margin: 25px;
     gap: 50px;
   }
-
   .tuto__step {
     flex: 1;
     margin: 0px 12px -25px -17px;
   }
-
   .container_tuto {
     padding-right: 100px;
     padding-left: 100px;
     padding-bottom: 20px;
   }
 }
-
 /*Loader*/
 /*Header*/
 /*Tuto*/
@@ -296,33 +268,28 @@ h2 {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
-
   .container__restau {
     margin-left: 100px;
     margin-right: 100px;
   }
-
   .container_tuto {
     padding-right: 100px;
     padding-left: 100px;
     padding-bottom: 20px;
   }
 }
-
 .card {
   background-color: #fff;
   border-radius: 16px;
   position: relative;
   text-decoration: none;
 }
-
 .card__img {
   height: 192px;
   width: 100%;
   border-radius: 16px 16px 0 0;
   object-fit: cover;
 }
-
 .card__new {
   background-color: #99E2D0;
   color: #008766;
@@ -332,7 +299,6 @@ h2 {
   top: 16px;
   right: 12px;
 }
-
 .card__desc {
   padding: 16px;
   position: relative;
@@ -341,15 +307,12 @@ h2 {
   justify-content: space-between;
   color: black;
 }
-
 .card__content {
   flex: 1;
 }
-
 .card__titre {
   margin: 0 0 4px 0;
 }
-
 .card__btn {
   font-size: 24px;
 }
@@ -365,11 +328,9 @@ h2 {
   cursor: pointer;
   position: relative;
 }
-
 .btn__like--outline {
   position: absolute;
 }
-
 .btn__like--solid {
   position: absolute;
   background: linear-gradient(180deg, #9356dc 0%, #ff79da 100%);
@@ -379,15 +340,12 @@ h2 {
   transform: scale(0);
   transition: transform 500ms;
 }
-
 .btn__like:hover {
   cursor: pointer;
 }
-
 .btn__like:hover .btn__like--solid {
   transform: scale(1);
 }
-
 .btn__like:hover .btn__like--outline {
   background: linear-gradient(180deg, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
@@ -410,7 +368,6 @@ h2 {
 .footer {
   background-color: #353535;
 }
-
 .footer__logo {
   color: #fff;
   font-family: "Shrikhand";
@@ -419,22 +376,18 @@ h2 {
   font-size: 18px;
   margin: 0 0 16px;
 }
-
 .footer__list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .footer__listetc {
   margin: 8px 0;
 }
-
 .footer__link {
   color: #fff;
   text-decoration: none;
 }
-
 .footer__icon {
   width: 20px;
   margin-right: 8px;
@@ -446,17 +399,14 @@ h2 {
     flex-direction: row;
     order: 1;
   }
-
   .footer__listetc {
     padding-right: 10px;
   }
-
   .footer__logo {
     order: 2;
     text-align: center;
     padding-top: 5px;
   }
-
   .footer .container {
     display: flex;
     flex-direction: row;
@@ -465,7 +415,6 @@ h2 {
     padding-top: 50px;
   }
 }
-
 /*Loader*/
 /*Header*/
 /*Tuto*/
@@ -519,17 +468,11 @@ h2 {
     padding-left: 150px;
     padding-right: 150px;
   }
-
   .resto__header {
-    padding: 16px 32px 0 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     justify-content: center;
     gap: 40px;
   }
 }
-
 .resto__header {
   padding: 16px 32px 0 16px;
   display: flex;
@@ -545,9 +488,9 @@ h2 {
 .menus {
   display: grid;
   /*@media (min-width:64rem) {
-        grid-template-columns: repeat(3,1fr);
-        column-gap: 16px;
-      }*/
+      grid-template-columns: repeat(3,1fr);
+      column-gap: 16px;
+    }*/
 }
 
 .Menu {
@@ -588,7 +531,7 @@ h2 {
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  animation: itemAppear .6s;
+  animation: itemAppear 0.6s;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   animation-fill-mode: both;
   transform: scale(0);
@@ -599,19 +542,16 @@ h2 {
   0% {
     transform: scale(0);
   }
-
   100% {
     transform: scale(1);
   }
 }
-
 .itemMenu__content {
   overflow: hidden;
   flex: 1;
 }
 
-.itemMenu__content,
-.itemMenu__titre {
+.itemMenu__content, .itemMenu__titre {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -641,7 +581,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 .itemMenu:hover {
@@ -665,7 +605,7 @@ h2 {
   justify-content: center;
   border-radius: 100px;
   transform: rotate(180deg);
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 .itemMenu__icon {
@@ -718,3 +658,5 @@ h2 {
   justify-content: center;
   padding: 30px 0;
 }
+
+/*# sourceMappingURL=main.css.map */
