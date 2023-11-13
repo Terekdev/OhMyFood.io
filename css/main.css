@@ -8,6 +8,7 @@ body {
   margin: 0;
   font-family: "Roboto";
   background-color: white;
+  max-width: 1400px;
 }
 
 h2 {
@@ -469,10 +470,11 @@ h2 {
     padding-right: 150px;
   }
   .resto__header {
-    justify-content: center;
     gap: 40px;
+    justify-content: center !important;
   }
 }
+
 .resto__header {
   padding: 16px 32px 0 16px;
   display: flex;
